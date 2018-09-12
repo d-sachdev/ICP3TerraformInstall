@@ -4,6 +4,7 @@
 
 echo "Got first parameter $1"
 echo "Got second parameter $2"
+tag1=$1
 arch=$2
 echo "Arch = $arch"
 
@@ -15,4 +16,4 @@ parse_icpversion ${1}
 echo "org=$org repo=$repo tag=$tag"
 
 
-docker run -e LICENSE=accept -v /opt/ibm:/data ${org}/${repo}-${arch}:${tag} cp -r cluster /data
+docker run -e LICENSE=accept -v /opt/ibm:/data ${org}/${repo}-${arch}:${tag1} cp -r cluster /data
