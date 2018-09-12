@@ -1,6 +1,6 @@
 #!/bin/bash
-LOGFILE=/tmp/loadimage.log
-exec  > $LOGFILE 2>&1
+#LOGFILE=/tmp/loadimage.log
+#exec  > $LOGFILE 2>&1
 echo "====="
 echo "Got first parameter $1"
 echo "Second parameter $2"
@@ -20,6 +20,8 @@ source /tmp/icp-bootmaster-scripts/functions.sh
 # This will populate $org $repo and $tag
 parse_icpversion ${image}
 echo "registry=${registry:-not specified} org=$org repo=$repo tag=$tag"
+
+
 
 if [[ "${image_location}" != "" ]]; then
   echo "Using image_location" 

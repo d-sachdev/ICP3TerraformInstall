@@ -1,6 +1,7 @@
 #!/bin/bash
 DefaultOrg="ibmcom"
-DefaultRepo="icp-inception"
+DefaultRepo="icp-inception-amd64"
+DefaultTag="3.1.0"
 
 # Populates globals $org $repo $tag
 function parse_icpversion() {
@@ -20,7 +21,7 @@ function parse_icpversion() {
     tag=$(echo ${1} | cut -d/ -f2 | cut -d: -f2)
   else
     repo=$DefaultRepo
-    tag=$1
+    tag=$DefaultTag
   fi
 }
 
