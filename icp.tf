@@ -309,7 +309,7 @@ resource "null_resource" "icp-boot" {
       "sudo /tmp/icp-bootmaster-scripts/load-image.sh ${var.icp-version} ${var.install_dir}/images/${basename(var.image_file)}  ${var.image_file}",
       "sudo mkdir -p ${var.install_dir}",
       "sudo chown ${var.ssh_user} ${var.install_dir}",
-      "/tmp/icp-bootmaster-scripts/copy_cluster_skel.sh ${var.icp-version}",
+      "/tmp/icp-bootmaster-scripts/copy_cluster_skel.sh ${var.icp-version} ${var.icp-arch}",
       "sudo chown -R ${var.ssh_user} ${var.install_dir}/*",
       "chmod 600 ${var.install_dir}/ssh_key",
       "python /tmp/icp-bootmaster-scripts/load-config.py ${var.config_strategy}",
