@@ -6,6 +6,7 @@ echo "Got first parameter $1"
 echo "Got second parameter $2"
 tag1=$1
 arch=$2
+echo "Tag = $tag1"
 echo "Arch = $arch"
 
 source /tmp/icp-bootmaster-scripts/functions.sh
