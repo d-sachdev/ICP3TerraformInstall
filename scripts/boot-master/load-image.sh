@@ -5,9 +5,11 @@ echo "====="
 echo "Got first parameter $1"
 echo "Second parameter $2"
 echo "Third parameter $3"
+echo "Fourth parameter $4"
 image=$1
 image_file=$2
 image_location=$3
+arch=$4
 
 echo "image_location $image_location"
 df -h
