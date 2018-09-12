@@ -6,6 +6,9 @@ source /tmp/icp-bootmaster-scripts/functions.sh
 parse_icpversion ${1}
 echo "org=$org repo=$repo tag=$tag"
 echo "Got first parameter $1" 
-tag1=$1
+echo "Got second parameter $2"
 
-docker run -e LICENSE=accept --net=host -t -v /opt/ibm/cluster:/installer/cluster ${org}/${repo}:${tag1} install
+tag1=$1
+arch=$2
+
+docker run -e LICENSE=accept --net=host -t -v /opt/ibm/cluster:/installer/cluster ${org}/${repo}-${arch}:${tag1} install
