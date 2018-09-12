@@ -1,9 +1,11 @@
 #!/bin/bash
-LOGFILE=/tmp/copyclusterskel.log
-exec  > $LOGFILE 2>&1
+#LOGFILE=/tmp/copyclusterskel.log
+#exec  > $LOGFILE 2>&1
 
 echo "Got first parameter $1"
-arch='amd64'
+echo "Got second parameter $2"
+arch=$2
+echo "Arch = $arch"
 
 source /tmp/icp-bootmaster-scripts/functions.sh
 
