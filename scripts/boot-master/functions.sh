@@ -1,6 +1,6 @@
 #!/bin/bash
 DefaultOrg="ibmcom"
-DefaultRepo="icp-inception-amd64"
+DefaultRepo="icp-inception"
 DefaultTag="3.1.0"
 
 # Populates globals $org $repo $tag
