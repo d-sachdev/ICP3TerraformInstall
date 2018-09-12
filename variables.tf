@@ -67,6 +67,12 @@ variable "icp-version" {
   default     = "2.1.0"
 }
 
+variable "icp-arch" {
+  description = "Architecture of ICP inception container. For example amd64 or ppc64le"
+  default     = "amd64"
+}
+
+
 variable "ssh_user" {
   description = "Username to ssh into the ICP cluster. This is typically the default user with for the relevant cloud vendor"
   default     = "root"
