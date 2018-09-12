@@ -349,7 +349,7 @@ resource "null_resource" "icp-boot" {
       "echo -n ${join(",", var.icp-management)} > ${var.install_dir}/managementlist.txt",
       "echo -n ${join(",", var.icp-va)} > ${var.install_dir}/valist.txt",
       "/tmp/icp-bootmaster-scripts/generate_hostsfiles.sh",
-      "/tmp/icp-bootmaster-scripts/start_install.sh ${var.icp-version}",
+      "/tmp/icp-bootmaster-scripts/start_install.sh ${var.icp-version} ${var.icp-arch}",
     ]
   }
 }
